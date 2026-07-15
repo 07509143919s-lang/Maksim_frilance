@@ -388,3 +388,33 @@ section[id]{scroll-margin-top:90px}
 .scene-card .portfolio-shot img{display:block;width:100%;height:auto;object-fit:contain}
 .scene-card .scene-placeholder{min-height:120px;display:flex;align-items:center;justify-content:center;text-align:center}
 .scene-card .scene-placeholder p{margin:0;font-size:clamp(22px,2vw,34px);font-weight:700}
+
+
+/* Hero visual: one restrained letter only. */
+.hero-letter-e{
+  position:absolute;
+  z-index:2;
+  right:8.5vw;
+  top:50%;
+  transform:translateY(-52%);
+  font:600 clamp(170px,27vw,480px)/.78 var(--display);
+  letter-spacing:-.12em;
+  color:rgba(255,255,255,.085);
+  text-shadow:0 0 70px rgba(88,112,255,.08);
+  user-select:none;
+  pointer-events:none;
+}
+@media(max-width:1100px){
+  .hero-letter-e{right:5vw;font-size:clamp(150px,30vw,330px)}
+}
+@media(max-width:780px){
+  .hero-letter-e{
+    right:50%;
+    top:auto;
+    bottom:30px;
+    transform:translateX(50%);
+    font-size:72vw;
+    color:rgba(255,255,255,.065);
+    text-shadow:0 0 45px rgba(88,112,255,.06);
+  }
+}
